@@ -1,7 +1,13 @@
-export const theoryByLevel = {
+export interface TheoryBlock {
+  title: string;
+  content: string;
+  ecoTips: string;
+}
+
+export const theoryByLevel: Record<number, TheoryBlock> = {
   1: {
     title: "Méthode ACTIF - Introduction",
-    content: `La méthode ACTIF vous aide à structurer vos prompts pour obtenir des réponses plus pertinentes :
+    content: `La méthode **ACTIF** vous aide à structurer vos prompts pour obtenir des réponses plus pertinentes :
 
 - **Action** : Que voulez-vous que l'IA fasse ?
 - **Contexte** : Dans quel cadre ou sur quel sujet ?
