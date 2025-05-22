@@ -4,6 +4,8 @@ import { ExerciseList } from './components/ExerciseList';
 import { LevelSelector } from './components/LevelSelector';
 import { theoryByLevel } from './data/theoryByLevel';
 import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
+
 
 function getLevelLabel(level: number): string {
   switch (level) {
@@ -89,6 +91,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center border-b">
+          <h1 className="text-xl font-bold text-gray-900">🌟 Formation IA</h1>
+          <nav className="space-x-4">
+            <Link to="/" className="text-gray-700 hover:text-blue-600">🏠 Accueil</Link>
+            <Link to="/lessons" className="text-gray-700 hover:text-blue-600">📘 Leçons rapides</Link>
+          </nav>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900">Apprentissage de Création de Prompts</h1>
           <p className="mt-2 text-gray-600">
